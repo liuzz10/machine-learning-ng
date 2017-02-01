@@ -1,3 +1,4 @@
+
 %% Machine Learning Online Class - Exercise 1: Linear Regression
 
 %  Instructions
@@ -63,6 +64,7 @@ alpha = 0.01;
 computeCost(X, y, theta)
 
 % run gradient descent
+theta = gradientDescent(X, y, theta, alpha, iterations);
 
 % print theta to screen
 fprintf('Theta found by gradient descent: ');

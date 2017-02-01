@@ -26,11 +26,18 @@ sigma = zeros(1, size(X, 2));
 % Hint: You might find the 'mean' and 'std' functions useful.
 %       
 
+% mu1 = mean (X(:,1));
+% mu2 = mean (X(:,2));
+% sigma1 = std (X(:,1));
+% sigma2 = std (X(:,2));
+% X1 = (X(:,1) - mu1) / sigma1;
+% X2 = (X(:,2) - mu2) / sigma2;
+% X = [X1; X2];
 
-
-
-
-
+m = size(X, 1);
+mu = mean(X);
+sigma = std(X);
+X_norm = (X - repmat(mu, m, 1))./repmat(sigma, m, 1);
 
 
 
